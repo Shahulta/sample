@@ -13,6 +13,15 @@ BOT = Client(
 )
 
 
+@BOT.on_message(filters.command("start"))
+async def start_cmd(client, message):
+  await message.reply_text("Hallo! How are you, \n Iam a bot ")
+
+@BOT.on_message(filters.command("about"))
+async def about_cmd(client, message):
+  await message.reply_text("My Owner Name is @Shanib_c_k ")
+
+
 print("BOT STARTED")
 
 
